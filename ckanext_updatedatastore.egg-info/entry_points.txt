@@ -1,0 +1,7 @@
+
+        [ckan.plugins]
+        updatedatastore=ckanext.updatedatastore.plugin:UpdatedatastorePlugin
+	[ckan.test_plugins]
+	    [paste.paster_command]
+            update=ckanext.updatedatastore.commands:Update
+    

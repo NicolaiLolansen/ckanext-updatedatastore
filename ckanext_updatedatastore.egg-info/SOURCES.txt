@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ckanext/__init__.py
+ckanext/updatedatastore/__init__.py
+ckanext/updatedatastore/commands.py
+ckanext/updatedatastore/plugin.py
+ckanext/updatedatastore/tests/__init__.py
+ckanext/updatedatastore/tests/test_plugin.py
+ckanext_updatedatastore.egg-info/PKG-INFO
+ckanext_updatedatastore.egg-info/SOURCES.txt
+ckanext_updatedatastore.egg-info/dependency_links.txt
+ckanext_updatedatastore.egg-info/entry_points.txt
+ckanext_updatedatastore.egg-info/top_level.txt
