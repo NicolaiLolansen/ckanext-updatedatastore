@@ -1,0 +1,2 @@
+include README.rst
+recursive-include ckanext/updatedatastore *.html *.json *.js *.less *.css *.mo
