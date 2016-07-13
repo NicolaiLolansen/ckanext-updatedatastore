@@ -18,8 +18,6 @@ class Update(CkanCommand):
 
     def command(self):
         self._load_config()
-	print("Welcome to datastore updater")
-	
 	try: 
 	    ckan = ckanapi.LocalCKAN()
         except:
@@ -39,7 +37,7 @@ class Update(CkanCommand):
                 if (i["format"] == "CSV" or i["format"] == "csv") and i["url_type"] != "upload":
                     url = i["url"]
                     print("updated CSV on", dataset["name"])
+                    # Change the url slightly (& character seems to work the best) to start the datapusher
                     ckan.action.resource_update(id=i["id"],package_id=i["package_id"],name=i["name"],format=i["format"],url=i["url"]+"&")
-                    time.sleep(5)
 		    ckan.action.resource_update(id=i["id"],package_id=i["package_id"],name=i["name"],format=i["format"],url=url)
-		    time.sleep(10)
+		    time.sleep(30) #Wait 30 seconds before doing another update. 
